@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:gainsboro;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: darkslategray;
+}
+
+/* Nav */
+
+.profile img {
+    width: 25%;
+    display: flex;
+    margin: auto;
+}
+
+.quote-container {
+    position: relative;
+    display: inline-block;
+}
+
+.quote p {
+    text-align: center;
+    color: darkred;
+}
+
+.name p {
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav a {
+    margin: 5px;
+}
+
+/* Cases */
+
+fieldset {
+    border-radius: 10px;
+    border: none;
+    background-color: whitesmoke;
+    margin: 10px auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+legend {
+    background-color: darkred;
+    border-radius: 5px;
+    color: gainsboro;
+    padding: 2px 5px 2px 5px;
+}
+
+/* Home */
+
+.home-image img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+}
+
+/* Posts */
+
+.date {
+    text-align: center;
+    font-style: italic;
+}
+
+.code {
+    font-family: 'Source Sans Pro';
+    display: block;
+    background-color: gainsboro;
+    /* background-color: darkslategray; */
+    /* color: #f2f2f2; */
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 10px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+    .code {
+        width: 300px;
+        overflow: auto;
+    }
+}
+
+.command {
+    font-weight: bold;
+}
+
+.show-more {
+    display: none;
+}
+
+#button-more {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+}
+
+input {
+    border-radius: 50px;
+}
+
+input:hover {
+    background-color: darkslategray;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info p {
+    background-color: gainsboro;
+    margin: 5px;
+    border-radius: 50px;
+    padding: 2px 10px 2px 10px;
+    font-size: 10px;
+}
+
+.exclusive {
+    display: flex;
+}
+
+.exclusive h2 {
+    background-color: darkred;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 2px 10px 2px 10px;
+}
+
+.fleche{
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 4px;
+}
+
+.bas{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/* Project */
+
+a .project {
+    color: black;
+}
+
+.project-image img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* About */
+
+.important {
+    color: darkred;
+}
+
+.certifications img {
+    width: 100px;    
+    height: auto;
+}
+
+/* Dark button */
+
+span {
+    display: inline-block;
+}
+
+span p {
+    display: inline-block;
+}
+
+.dark {
+    border: none;
+    background-color: whitesmoke;
+}
+
+/* Dark mode */
+
+.dark-mode {
+    color: #ffffff;
+    background-color: #121212;
+}
+
+.dark-mode fieldset {
+    background-color: #333333;
+}
+
+.dark-mode a {
+    color: #ffffff;
+}
+
+.dark-mode .dark {
+    background-color: #333333;
+    color: #ffffff
+}
+
+.dark-mode .quote p {
+    color: #CE2029;
+}
+
+.dark-mode legend {
+    background-color: #CE2029;
+}
+
+.dark-mode .info p {
+    background-color: #444444;
+}
+
+.dark-mode #button-more {
+    background-color: #444444;
+}
+
+.dark-mode #button-more:hover {
+    background-color: slategray;
+}
+
+.dark-mode .code {
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode a:hover {
+    color: slategray;
+}
+
+.dark-mode input {
+    color: white;
+}
+
+.dark-mode .project-image img {
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .code {
+    background-color: #121212;
+}
+
+.dark-mode .important {
+    color: #CE2029;
+}
