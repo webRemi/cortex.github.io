@@ -201,6 +201,20 @@ a .project {
     height: auto;
 }
 
+/* Team */
+
+.profileMember {
+    border-radius: 25px;
+}
+
+.profileMember img {
+    width: 25%;
+    display: flex;
+    margin: auto;
+    background-color: #121212;
+    border-radius: 500px;
+}
+
 /* Dark button */
 
 span {
