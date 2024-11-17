@@ -103,26 +103,11 @@ legend {
     margin-right: auto;
     margin-left: auto;
     border: none;
-}
-
-input {
     border-radius: 50px;
 }
 
-input:hover {
+#button-more:hover {
     background-color: darkslategray;
-}
-
-.fleche{
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 4px;
-}
-
-.bas{
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
 }
 
 /* Team */
@@ -163,6 +148,42 @@ a .project {
 .certifications img {
     width: 100px;    
     height: auto;
+}
+
+/* Member */
+
+.login {
+    display: block;  
+    width: 500px; 
+    margin: 50px auto;  
+    padding: 20px;
+    background-color: gainsboro;
+    border-radius: 10px;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  
+}
+
+.login input {
+    width: 100%;  
+    padding: 10px;
+    margin: 10px 0; 
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#submit {
+    width: 100%; 
+    padding: 10px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login #submit:hover {
+    background-color: rgb(71, 15, 15);
 }
 
 /* Dark button */
@@ -228,7 +249,7 @@ span p {
     color: slategray;
 }
 
-.dark-mode input {
+.dark-mode #button-more {
     color: white;
 }
 
@@ -242,4 +263,16 @@ span p {
 
 .dark-mode .important {
     color: #CE2029;
+}
+
+.dark-mode .login {
+    background-color: #121212;
+}
+
+.dark-mode #submit {
+    background-color: #CE2029;
+}
+
+.dark-mode .login {
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.3);
 }
