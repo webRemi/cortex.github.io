@@ -1,5 +1,5 @@
 var i = 0;
-var txt = '"They engage in a frenetic dance, an infernal electronic waltz where pulses of light and shadow weave a symphony of possibilities."';
+var txt = '"Aenean faucibus pharetra elit, vitae mattis elit vestibulum eu."';
 var speed = 50;
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -17,31 +17,65 @@ function writeQuote() {
 
 function myFunction() {
     var element = document.body;
-    var button = document.getElementById("dark"); 
-    element.classList.toggle("dark-mode");
-    
+    var button = document.getElementById("dark");
+    element.classList.toggle("dark-mode");  
+    var images = document.querySelectorAll('img');
+
+    images.forEach(function(img) {
+        var imageSrc = img.getAttribute('src'); 
+        var newSrc = imageSrc; 
+
+        if (imageSrc.includes('black')) {
+            newSrc = imageSrc.replace('black', 'white'); 
+        } else if (imageSrc.includes('white')) {
+            newSrc = imageSrc.replace('white', 'black'); 
+        }
+
+        img.setAttribute('src', newSrc);
+    });
+
     if (element.classList.contains("dark-mode")) {
-        localStorage.setItem("darkMode", "enabled");
-        document.getElementById("profileImg").src = "assets/general/cortex-white.webp"; 
-        //document.getElementById("asxImg").src = "assets/team/asx-white.webp";
+        localStorage.setItem("darkMode", "enabled");  
         button.textContent = "1"; 
     } else {
-        localStorage.setItem("darkMode", "disabled");
-        document.getElementById("profileImg").src = "assets/general/cortex-black.webp";
-        //document.getElementById("asxImg").src = "assets/team/asx-black.webp"; 
+        localStorage.setItem("darkMode", "disabled");  
         button.textContent = "0"; 
     }
 }
 
 function checkDarkMode() {
+    var element = document.body;
+    var images = document.querySelectorAll('img');
+    
     if (localStorage.getItem("darkMode") === "enabled") {
-        document.body.classList.add("dark-mode");
-        document.getElementById("profileImg").src = "assets/general/cortex-white.webp"; 
-        //document.getElementById("asxImg").src = "assets/team/asx-white.webp";
+        element.classList.add("dark-mode");
+        
+        images.forEach(function(img) {
+            var imageSrc = img.getAttribute('src'); 
+            var newSrc = imageSrc; 
+
+            if (imageSrc.includes('black')) {
+                newSrc = imageSrc.replace('black', 'white'); 
+            }
+
+            img.setAttribute('src', newSrc);
+        });
+
         document.getElementById("dark").textContent = "1"; 
     } else {
-        document.getElementById("profileImg").src = "assets/general/cortex-black.webp";
-        //document.getElementById("asxImg").src = "assets/team/asx-black.webp";
+        element.classList.remove("dark-mode");
+        
+        images.forEach(function(img) {
+            var imageSrc = img.getAttribute('src'); 
+            var newSrc = imageSrc; 
+
+            if (imageSrc.includes('white')) {
+                newSrc = imageSrc.replace('white', 'black'); 
+            }
+
+            img.setAttribute('src', newSrc);
+        });
+
         document.getElementById("dark").textContent = "0"; 
     }
 }
